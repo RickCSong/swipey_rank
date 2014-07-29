@@ -38,13 +38,19 @@ describe GamesController, :type => :controller do
     end
 
     context 'with invalid params' do
-      subject { post :create, @attributes.merge(format: :json) }
+      subject { post :create, invalid_attributes.merge(format: :json) }
 
-      it 'should not create a game with an invalid verification token' do
-        @attributes = valid_attributes
-        @attributes[:game][:verification_token] = 4220
-        expect { subject }.to_not change(Game, :count)
+      context 'invalid verification token' do
+        let(:invalid_attributes) do
+          valid_attributes[:game][:verification_token] = 4220
+          valid_attributes
+        end
+
+        it 'should not create a game with an invalid verification token' do
+          expect { subject }.to_not change(Game, :count)
+        end
       end
+
     end
 
   end

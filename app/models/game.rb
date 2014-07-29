@@ -19,6 +19,8 @@ class Game < ActiveRecord::Base
   private
 
   def valid_verification_token
-    (user.username.length * 3 + score * 42) == verification_token
+    if (user.username.length * 3 + score * 42) != verification_token
+      errors.add(:verification_token, 'invalid verification token')
+    end
   end
 end

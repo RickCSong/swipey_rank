@@ -1,5 +1,5 @@
 class RankingController < ApplicationController
   def index
-    @games = Game.all
+    @rankings = User.by_rank
   end
 end

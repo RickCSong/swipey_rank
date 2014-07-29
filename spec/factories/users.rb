@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
-    username Faker::Internet.user_name
-    fullname Faker::Name.name
+    username { Faker::Internet.user_name }
+    fullname { Faker::Name.name }
   end
 end
