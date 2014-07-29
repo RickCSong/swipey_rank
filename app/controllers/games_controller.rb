@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   respond_to :html, :json
+  skip_before_filter :verify_authenticity_token
 
   # POST /games
   # POST /games.json
