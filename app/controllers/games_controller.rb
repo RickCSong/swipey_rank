@@ -1,19 +1,21 @@
 class GamesController < ApplicationController
-  respond_to :html, :json
   skip_before_filter :verify_authenticity_token
 
   # POST /games
   # POST /games.json
   def create
     swipey_value = user_params[:username].length * 3 + Integer(game_params[:score]) * 42
-    if Integer(params[:swipey]).to_i != swipey_value
-      return
-    end
 
     @user = User.find_or_create_by(user_params)
-    @game = Game.create(game_params.merge(user_id: @user.id))
+    @game = Game.new(game_params.merge(user_id: @user.id))
 
-    respond_with @game
+    respond_to do |format|
+      if @game.save && Integer(params[:swipey]).to_i == swipey_value
+        format.json { render :show, status: :created, location: @game }
+      else
+        format.json { render json: @game.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
