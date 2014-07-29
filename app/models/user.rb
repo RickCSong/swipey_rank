@@ -22,4 +22,8 @@ class User < ActiveRecord::Base
   def time_wasted
     games.sum(:duration) / 1000
   end
+
+  def email
+    username + '@squareup.com'
+  end
 end

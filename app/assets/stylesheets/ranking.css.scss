@@ -1,3 +1,41 @@
-// Place all the styles related to the ranking controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.rankings {
+  padding: 0px 15px;
+
+  .rank {
+    display: flex;
+
+    & + .rank {
+      margin-top: 20px;
+    }
+
+    .score-bubble {
+      text-align: center;
+      padding-top: 19px;
+
+      width: 75px;
+      height: 75px;
+      border-radius: 75px;
+      background-color: #d13118;
+      color: #ffffff;
+
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .user-info {
+      margin-left: 15px;
+      margin-top: 10px;
+      flex-grow: 1;
+
+      h3 { margin-top: 0px; }
+      p { color: #555555; }
+    }
+
+    .time-wasted {
+      p {
+        margin-top: 25px;
+        color: #555555;
+      }
+    }
+  }
+}
