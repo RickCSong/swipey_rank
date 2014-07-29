@@ -25,6 +25,7 @@ gem 'binding_of_caller'
 
 group :development do
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'pry-rails'
   gem 'better_errors'
 end
