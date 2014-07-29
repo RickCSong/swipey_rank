@@ -12,7 +12,7 @@ class GamesController < ApplicationController
     @user = User.find_or_create_by(user_params)
     @game = Game.create(game_params.merge(user_id: @user.id))
 
-    respond_with @game
+    render plain: "OK"
   end
 
   private
