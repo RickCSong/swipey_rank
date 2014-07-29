@@ -8,6 +8,7 @@
     <th>User</th>
     <th>Username</th>
     <th>Time Ago</th>
+    <th>Total Time Wasted</th>
   </tr>
   </thead>
   <tbody>
@@ -17,6 +18,7 @@
       <td><%= user.fullname %></td>
       <td><%= user.username %></td>
       <td><%= time_ago_in_words(user.best_game.created_at) %></td>
+      <td><%= distance_of_time_in_words(user.time_wasted) %></td>
     </tr>
   <% end %>
   </tbody>

@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def best_score
     best_game.score
   end
+
+  def time_wasted
+    games.sum(:duration) / 1000
+  end
 end
