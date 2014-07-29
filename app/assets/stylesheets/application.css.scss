@@ -17,14 +17,12 @@
 
 @import "bootstrap";
 
-//->Prelang (ui_framework:twitter_bootstrap)
+.navbar-header {
+  padding-left: 50px;
+  background: image-url('icon_large.png') no-repeat left center fixed;
+}
 
 // Give everything in 'yield' margin to separate it.
 .yield {
   margin: 30px;
-}
-
-// Constrain forms for models (scaffolded models) so they aren't full page width.
-.form-model {
-  max-width: 750px;
 }

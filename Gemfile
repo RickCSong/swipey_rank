@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
 gem 'rails', '4.1.4'
 gem 'pg'
@@ -22,22 +23,21 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'binding_of_caller'
 
-group :development, :test do
-  gem 'faker'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-end
-
-group :test do
-  gem 'shoulda-matchers'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-end
-
 group :development do
   gem 'spring'
   gem 'pry-rails'
   gem 'better_errors'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :production do
