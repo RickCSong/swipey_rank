@@ -5,5 +5,6 @@ FactoryGirl.define do
     user
     score { rand(100) }
     duration { rand(99999) }
+    verification_token { user.username.length * 3 + score * 42 }
   end
 end

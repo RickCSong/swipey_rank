@@ -1,21 +1,18 @@
 class GamesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
-  # POST /games
+  respond_to :json
+
+  def show
+    @game = Game.find(params[:id])
+  end
+
   # POST /games.json
   def create
-    swipey_value = user_params[:username].length * 3 + Integer(game_params[:score]) * 42
-
     @user = User.find_or_create_by(user_params)
-    @game = Game.new(game_params.merge(user_id: @user.id))
+    @game = Game.create(game_params.merge(user_id: @user.id))
 
-    respond_to do |format|
-      if @game.save && Integer(params[:swipey]).to_i == swipey_value
-        format.json { render :show, status: :created, location: @game }
-      else
-        format.json { render json: @game.errors, status: :unprocessable_entity }
-      end
-    end
+    respond_with @game
   end
 
   private
@@ -25,6 +22,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:score, :duration)
+      params.require(:game).permit(:score, :duration, :verification_token)
     end
 end
