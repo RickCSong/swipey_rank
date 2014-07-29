@@ -12,10 +12,10 @@ class User < ActiveRecord::Base
   end
 
   def best_game
-    games.order('score').first
+    games.order('score DESC').first
   end
 
   def best_score
-    games.order('score').first.score
+    best_game.score
   end
 end
