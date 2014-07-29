@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :game do
-    user nil
-    score 1
-    time_played 1
+    user
+    score rand(100)
+    duration rand(99999)
   end
 end

@@ -5,7 +5,7 @@ RSpec.describe "games/show", :type => :view do
     @game = assign(:game, Game.create!(
       :user => nil,
       :score => 1,
-      :time_played => 2
+      :duration => 2
     ))
   end
 

@@ -6,12 +6,12 @@ RSpec.describe "games/index", :type => :view do
       Game.create!(
         :user => nil,
         :score => 1,
-        :time_played => 2
+        :duration => 2
       ),
       Game.create!(
         :user => nil,
         :score => 1,
-        :time_played => 2
+        :duration => 2
       )
     ])
   end

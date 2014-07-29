@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
-    username "MyString"
-    fullname "MyString"
+    username Faker::Internet.user_name
+    fullname Faker::Name.name
   end
 end

@@ -5,7 +5,7 @@ RSpec.describe "games/new", :type => :view do
     assign(:game, Game.new(
       :user => nil,
       :score => 1,
-      :time_played => 1
+      :duration => 1
     ))
   end
 
@@ -18,7 +18,7 @@ RSpec.describe "games/new", :type => :view do
 
       assert_select "input#game_score[name=?]", "game[score]"
 
-      assert_select "input#game_time_played[name=?]", "game[time_played]"
+      assert_select "input#game_duration[name=?]", "game[duration]"
     end
   end
 end
