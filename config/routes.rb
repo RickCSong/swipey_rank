@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :games, only: [:create, :show]
+
   scope format: true, constraints: { :format => 'json' } do
-    resources :games, only: [:create, :show]
     resources :rankings, only: [:index]
   end
 
