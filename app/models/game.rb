@@ -8,6 +8,10 @@ class Game < ActiveRecord::Base
             presence: true,
             numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  validates :backflips,
+            presence: true,
+            numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   validates :duration,
             numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
