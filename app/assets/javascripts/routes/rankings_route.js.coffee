@@ -3,7 +3,7 @@ SwipeyRank.RankingsRoute = Ember.Route.extend
     $.getJSON('/rankings.json').then (rankings) ->
       SwipeyRank.Utils.camelizeArray(rankings)
 
-  afterModel: ->
-    Ember.run.later this, ->
-      @refresh()
-    , 5000
+#  afterModel: ->
+#    Ember.run.later this, ->
+#      @refresh()
+#    , 5000
