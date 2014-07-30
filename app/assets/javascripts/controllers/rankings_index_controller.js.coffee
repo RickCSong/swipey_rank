@@ -29,4 +29,8 @@ SwipeyRank.RankingsIndexController = Ember.ArrayController.extend({
 
     content
   ).property('rankedContent.@each', 'query')
+
+  actions:
+    resetFilter: ->
+      @set('query', '')
 })
