@@ -1,10 +1,14 @@
 .rankings {
   padding: 0px 15px;
 
+  .filter {
+    margin-bottom: 20px;
+  }
+
   .rank {
     display: flex;
 
-    & + .rank {
+    & ~ .rank {
       margin-top: 20px;
     }
 

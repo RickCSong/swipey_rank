@@ -23,6 +23,8 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'binding_of_caller'
 
+gem 'ember-rails'
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'

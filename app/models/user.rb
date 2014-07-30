@@ -7,23 +7,11 @@ class User < ActiveRecord::Base
   validates :fullname,
             presence: true
 
-  def self.by_rank
-    User.all.sort_by(&:best_score).reverse
+  def max_score
+    games.order('score DESC').first.score
   end
 
-  def best_game
-    games.order('score DESC').first
-  end
-
-  def best_score
-    best_game.score
-  end
-
-  def time_wasted
+  def time_spent
     games.sum(:duration) / 1000
-  end
-
-  def email
-    username + '@squareup.com'
   end
 end

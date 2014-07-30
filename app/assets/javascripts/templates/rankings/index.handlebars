@@ -1,0 +1,7 @@
+<div class="filter">
+  {{input class='form-control' valueBinding='query' placeholder='Filter'}}
+</div>
+
+{{#each filteredContent}}
+  {{view SwipeyRank.RankingsIndexItemView}}
+{{/each}}
