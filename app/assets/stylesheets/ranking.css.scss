@@ -13,6 +13,7 @@
     }
 
     .score-bubble {
+      position: relative;
       text-align: center;
       padding-top: 19px;
 
@@ -24,6 +25,24 @@
 
       font-size: 26px;
       font-weight: bold;
+
+      .score-bubble-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 3px;
+        bottom: 0;
+        background: image-url('icon_large.png') no-repeat center center;
+        background-size: 50px 50px;
+        opacity: 0.15;
+      }
+
+      .score-bubble-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
     }
 
     .user-info {

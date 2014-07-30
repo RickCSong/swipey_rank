@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   skip_before_action :verify_authenticity_token
-  
+
   respond_to :json
 
   def show
@@ -12,6 +12,7 @@ class GamesController < ApplicationController
     @user = User.find_or_create_by(user_params)
     @game = Game.create(game_params.merge(user_id: @user.id))
 
+    # TODO: Fix this.
     render plain: "OK"
   end
 
