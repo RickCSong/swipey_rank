@@ -6,4 +6,4 @@ SwipeyRank.RankingsRoute = Ember.Route.extend
   afterModel: ->
     Ember.run.later this, ->
       @refresh()
-    , 1000
+    , 5000
