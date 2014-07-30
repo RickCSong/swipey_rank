@@ -6,6 +6,9 @@
   }
 
   .rank {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 
     & ~ .rank {
@@ -48,6 +51,8 @@
     .user-info {
       margin-left: 15px;
       margin-top: 10px;
+      -webkit-flex-grow: 1;
+      -ms-flex-grow: 1;
       flex-grow: 1;
 
       h3 { margin-top: 0px; }

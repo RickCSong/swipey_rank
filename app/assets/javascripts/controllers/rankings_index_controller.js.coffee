@@ -4,6 +4,8 @@ SwipeyRank.RankingsIndexController = Ember.ArrayController.extend({
   sortProperties: 'maxScore'.w()
   sortAscending: false
 
+
+
   query: ''
 
   rankedContent: ( ->
