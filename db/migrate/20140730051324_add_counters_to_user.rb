@@ -9,7 +9,7 @@ class AddCountersToUser < ActiveRecord::Migration
         User.all.each do |user|
           user.update_attributes(
             max_score: user.games.order('score DESC').first.score,
-            max_backflips: user.games.order('backflips DESC').first.score,
+            max_backflips: user.games.order('backflips DESC').first.backflips,
             time_spent: user.games.sum(:duration)
           )
         end
