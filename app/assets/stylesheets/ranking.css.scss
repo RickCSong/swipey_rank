@@ -1,3 +1,9 @@
+@-webkit-keyframes thumb {
+  0% { -webkit-transform: rotate(0deg); }
+  50% { -webkit-transform: rotate(-30deg); }
+  100% { -webkit-transform: rotate(-360deg); }
+}
+
 .rankings {
   padding: 0px 15px;
 
@@ -29,6 +35,10 @@
       font-size: 26px;
       font-weight: bold;
 
+      & ~ .score-bubble {
+        margin-left: 10px;
+      }
+
       .score-bubble-bg {
         position: absolute;
         left: 0;
@@ -56,7 +66,36 @@
       flex-grow: 1;
 
       h3 { margin-top: 0px; }
-      p { color: #555555; }
+      .user-detail {
+        position: relative;
+        color: #555555;
+        & ~ .user-detail { margin-left: 20px; }
+
+        &.user-backflips {
+          padding-left: 30px;
+        }
+
+        .backflip-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+
+          background: image-url('icon_large.png') no-repeat center bottom;
+          background-size: 20px 20px;
+
+          &.flipping {
+            -webkit-animation-name: thumb;
+            -webkit-animation-duration: 1000ms;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+          }
+        }
+      }
+
     }
 
     .time-wasted {

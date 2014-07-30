@@ -5,7 +5,13 @@
 
 <span class="user-info">
   <h3>{{fullName}}</h3>
-  <p> Rank #{{rank}} </p>
+  <div>
+    <span class="user-detail">Rank #{{rank}}</span>
+    <span class="user-detail user-backflips">
+      <div {{bind-attr class="isFlipping:flipping :backflip-img"}}></div>
+      {{maxBackflips}} Backflips
+    </span>
+  </div>
 </span>
 
 <span class="time-wasted">
