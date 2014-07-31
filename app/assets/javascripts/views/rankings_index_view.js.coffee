@@ -26,5 +26,7 @@ SwipeyRank.RankingsIndexView = Ember.View.extend
     Ember.run.debounce this, @executeTimeout, @get('timeout')
 
   executeTimeout: ->
-    @get('controller').send('resetFilter')
-    @get('listView').scrollTo(0)
+    Ember.run =>
+      @get('controller').send('resetFilter')
+      Ember.run.next =>
+        @get('listView').scrollTo(0)
