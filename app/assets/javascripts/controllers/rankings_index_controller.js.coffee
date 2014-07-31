@@ -1,7 +1,7 @@
 # for more details see: http://emberjs.com/guides/controllers/
 
 SwipeyRank.RankingsIndexController = Ember.ArrayController.extend({
-  sortProperties: 'maxScore'.w()
+  sortProperties: 'maxScore maxBackflips'.w()
   sortAscending: false
 
   query: ''
