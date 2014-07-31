@@ -1,6 +1,10 @@
 #= require jquery
+#= require zynga-scroller
+
 #= require handlebars
 #= require ember
+#= require ember-list-view
+
 #= require_self
 #= require swipey_rank
 

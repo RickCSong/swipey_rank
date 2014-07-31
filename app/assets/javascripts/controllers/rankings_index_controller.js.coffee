@@ -14,15 +14,15 @@ SwipeyRank.RankingsIndexController = Ember.ArrayController.extend({
       if item.maxScore != arrangedContent[index - 1]?.maxScore
         rank = index + 1
 
-      SwipeyRank.RankingsIndexItemController.create
-        content: item
-        rank: rank
+      rankObject = Ember.Object.create(item)
+      rankObject.set('rank', rank)
+      rankObject.set('isFlipping', rankObject.get('maxBackflips') > 0)
+      rankObject
   ).property('arrangedContent.@each')
 
   filteredContent: ( ->
     content = @get('rankedContent')
     query = new RegExp(RegExp.escape(@get('query')), 'i')
-    console.log query
 
     unless Ember.empty(query)
       content = content?.filter (c) ->

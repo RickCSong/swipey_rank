@@ -1,10 +1,14 @@
-# for more details see: http://emberjs.com/guides/views/
+#= require ./rankings_list_view
 
 SwipeyRank.RankingsIndexView = Ember.View.extend
   templateName: 'rankings/index'
 
   # 30 Seconds
-  timeout: 1000 * 30
+  timeout: 30 * 1000
+
+  listView: SwipeyRank.RankingsListView.create(
+    contentBinding: 'controller.filteredContent'
+  )
 
   touchStart: ->
     Ember.run.debounce this, @executeTimeout, @get('timeout')
@@ -23,4 +27,4 @@ SwipeyRank.RankingsIndexView = Ember.View.extend
 
   executeTimeout: ->
     @get('controller').send('resetFilter')
-    window.scrollTo(0, 0)
+    @get('listView').scrollTo(0)

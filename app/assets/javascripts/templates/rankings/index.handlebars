@@ -2,6 +2,7 @@
   {{input class='form-control' valueBinding='query' placeholder='Filter'}}
 </div>
 
-{{#each filteredContent}}
-  {{view SwipeyRank.RankingsIndexItemView}}
-{{/each}}
+<div class="rank-list-wrapper">
+  <div class="rank-gradient"></div>
+  {{view view.listView}}
+</div>

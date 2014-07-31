@@ -7,8 +7,28 @@
 .rankings {
   padding: 0px 15px;
 
-  .filter {
-    margin-bottom: 20px;
+  .rank-list-wrapper {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .rank-list {
+    padding-top: 20px;
+  }
+
+  .rank-gradient {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 10;
+
+    background-image: -webkit-gradient(
+                    linear, left top, left bottom, from(rgba(239,239,238,1)),
+                    to(rgba(239,239,238,0))
+    );
+    background-size: 100% 20px;
+    background-repeat: no-repeat;
   }
 
   .rank {
@@ -16,10 +36,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
-    & ~ .rank {
-      margin-top: 20px;
-    }
+    width: 100%;
 
     .score-bubble {
       position: relative;
