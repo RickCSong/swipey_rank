@@ -21,7 +21,8 @@ SwipeyRank.RankingsIndexController = Ember.ArrayController.extend({
 
   filteredContent: ( ->
     content = @get('rankedContent')
-    query = @get('query')
+    query = new RegExp(RegExp.escape(@get('query')), 'i')
+    console.log query
 
     unless Ember.empty(query)
       content = content?.filter (c) ->

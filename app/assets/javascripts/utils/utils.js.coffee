@@ -14,3 +14,6 @@ SwipeyRank.Utils.camelizeArray = (arr) ->
       when 'object' then camelized[i] = SwipeyRank.Utils.camelizeObject(value)
       else camelized[i] = value
   camelized
+
+RegExp.escape = (s) ->
+  String(s).replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g, '\\$1').replace(/\x08/g, '\\x08')
