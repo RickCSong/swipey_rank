@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'rails', '4.1.4'
 gem 'pg'
@@ -30,6 +30,11 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'pry-rails'
   gem 'better_errors'
+
+  gem 'capistrano'
+  gem 'capistrano-rvm', '>= 0.1.0' # seems to really like 0.0.3
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 
 group :test do
