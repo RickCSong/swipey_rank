@@ -6,8 +6,8 @@ class StatsController < ApplicationController
     stats[:total_games_played] = Game.count
     stats[:total_number_players] = User.count
     stats[:median_score] = User.order('max_score').map(&:max_score)[User.count/2]
-    stats[:average_game_score] = Game.sum(:score)/Game.count
-    stats[:average_backflips] = Game.sum(:backflips)/Game.count
+    stats[:average_game_score] = Game.sum(:score)/Game.count.to_f
+    stats[:average_backflips] = Game.sum(:backflips)/Game.count.to_f
 
     stats[:total_time_spent_ms] = Game.sum(:duration)
     stats[:average_time_per_game_ms] = Game.sum(:duration)/Game.count
