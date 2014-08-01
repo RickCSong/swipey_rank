@@ -1,0 +1,96 @@
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    scss:
+      $dark-text-color: rgb(61, 69, 76);
+      $border-color: rgb(219, 219, 219);
+      $text-color: rgb(128, 128, 128);
+      $muted-color: rgb(157, 162, 166);
+      $vertical-rhythm: 12px;
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-light.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-light.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-light-2f642b292d14d75d5f32c9ed72c48474.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-light-577e933026b17c5256164aef57c8ac7d.ttf) format("truetype");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-lightitalic.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-lightitalic.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-lightitalic-5beba20ac0c52cb5d991db7e99f71922.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-lightitalic-3e163b665005e7ab43aa97636ee67fd0.ttf) format("truetype");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-regular.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-regular.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-regular-6a5fb006f7400e3ac2db120a476c56bd.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-regular-285bb7a624e3b212549965e043b4546b.ttf) format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-regularitalic.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-regularitalic.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-regularitalic-942cd12f5ca71994cee00dee3d76c1fd.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-regularitalic-995bcc7deafdf240c97092781a1d57ea.ttf) format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-medium.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-medium.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-medium-5a6f039439c1c8e6064e37342270b45a.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-medium-2f16d003b72d02603c7e6c3b668316a7.ttf) format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-mediumitalic.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-mediumitalic.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-mediumitalic-dad21b4b4bbbc99a3f1d500cd73e7ab9.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-mediumitalic-03c0644f01ee5885bbd1278d551b2ab2.ttf) format("truetype");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-bold.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-bold.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-bold-4eb993fdb0c4963ab37df16496655cb8.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-bold-7aac7bb86d93b69a5639bf751d58c50b.ttf) format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+
+      @font-face {
+        font-family: "sqmarket";
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-bolditalic.eot);
+        src: url(https://squareup.com/jp/public-fonts/sqmarket/sqmarket-bolditalic.eot?#iefix) format("embedded-opentype"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-bolditalic-5f1966a90f04ae0392ddc458c2f5ce17.woff) format("woff"), url(https://dl6rt3mwcjzxg.cloudfront.net/assets/sqmarket/sqmarket-bolditalic-23900cc22217a2be6f9e39db3972da8f.ttf) format("truetype");
+        font-weight: 700;
+        font-style: italic;
+      }
+
+
+      body {
+        font-family: "sqmarket", "Helvetica Neue", Helvetica, sans-serif;
+        color: $dark-text-color;
+        font-size: 13px;
+      }
+
+  body data-force-encoding="✓"
+    h3 #{@user.fullname}'s SwipeyStats
+    p Highest Score: #{@user.max_score}
+    p Most Backflips: #{@user.max_backflips}
+    p Games Played: #{@user.games.length}
+    p Total Time Played: #{Time.at(@user.time_spent/1000).strftime("%H Hours, %m Minutes, and %s Seconds")}
+
+    p Thanks for playing and make sure to vote for us!
