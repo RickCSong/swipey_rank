@@ -3,4 +3,5 @@ SwipeyRank.Router.reopen
 
 SwipeyRank.Router.map ()->
   @resource 'rankings', ->
+  @resource 'stats', ->
 

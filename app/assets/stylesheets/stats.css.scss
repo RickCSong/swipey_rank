@@ -1,0 +1,71 @@
+.stats {
+  position: relative;
+  height: 1440px;
+  width: 2560px;
+
+  background: image-url('background.gif') no-repeat center center;
+  background-size: cover;
+
+
+  .bird {
+    position: absolute;
+
+    background: image-url('icon_brand.gif') no-repeat center center;
+    background-size: contain;
+    width: 223px;
+    height: 157px;
+  }
+
+  .pipes {
+    position: absolute;
+    bottom: 0px;
+
+    img {
+      margin-right: 56px;
+    }
+
+    .screen {
+      display: inline-block;
+      width: 2560px;
+      height: 1200px;
+
+      .pipe {
+        position: absolute;
+        bottom: 301px;
+
+        &.first {
+          left: 100px;
+        }
+
+        &.second {
+          left: 400px;
+        }
+
+        &.third {
+          left: 700px;
+        }
+
+        img {
+          width: 200px;
+          height: auto;
+        }
+
+        .pipe-value {
+          position: absolute;
+          top: -100px;
+          text-align: center;
+          width: 200px;
+        }
+
+        .pipe-label {
+          position: absolute;
+          bottom: -160px;
+          text-align: center;
+          width: 200px;
+        }
+      }
+
+    }
+  }
+
+}
