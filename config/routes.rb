@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :games, only: [:create, :show]
 
+
   scope format: true, constraints: { :format => 'json' } do
     resources :rankings, only: [:index]
+    resources :stats, only: [:index]
   end
 
   root 'static#index'
